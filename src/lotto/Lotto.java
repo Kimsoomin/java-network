@@ -1,5 +1,7 @@
 package lotto;
 
+import java.util.Arrays;
+
 public class Lotto {
 	// 횟수별 6개의 로또 번호 저장을 위한 2차원 배열 선언
 	private int[][] lottos; // 5000 원이면 5줄 발급
@@ -55,17 +57,17 @@ public class Lotto {
 	 */
 	private boolean isDupl(int count, int randomNum){
 		for (int i = 0; i < lottos[count].length; i++) {
-			if (lottos[count][i] != randomNum) { // lottos[1][i] == randomNum 
-				return true;
+			if (lottos[count][i] == randomNum) { // lottos[1][i] == randomNum 
+				return false;
 			}
 		}
-		return false;
+		return true;
 	}
 	/**
 	 * 카운트 별로 로또번호 오름차순 정렬
 	 */
-	private void sort(int[] arr){
-		
+	public void sort(int[][] arr){
+		Arrays.sort(arr);
 	}
 	
 }

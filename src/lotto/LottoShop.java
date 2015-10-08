@@ -10,9 +10,11 @@ import java.util.Scanner;
  */
 public class LottoShop {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("행운의 로또");
 		Lotto lotto = new Lotto();
+		Scanner scanner = new Scanner(System.in);
+		int [][] arr = new int [5][5];
+		lotto.sort(arr);
+		System.out.println("행운의 로또");
 		lotto.inputMoney(scanner.nextInt());
 		System.out.println(lotto.printLotto());
 	}
